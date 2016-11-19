@@ -1,0 +1,262 @@
+.nav-bar-general{
+  padding: 1rem;
+  background: #EAEAEA
+
+  }
+
+  .logo a, .menu a{
+  color: #5B5B5B;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.logo a:visited, .menu a:visited {
+  color: #5B5B5B;
+}
+
+.logo h6 {
+  display: inline-block;
+  margin-left: 1em;
+  font-weight: 200;
+}
+.menu :hover{
+  background-color: transparent!important;
+}
+
+
+
+
+
+/* SECTIONS */
+.content-center{
+ background:#000000;
+}
+
+.title{
+  font-size: 35px;
+  color:#FCFCFC;
+  margin:0 2px 2px 0rem; 
+  font-weight: 200;
+  padding: 4rem 0rem 1rem;
+  letter-spacing: 1px; 
+}
+
+.text-highlight{
+  color:#7171C6;
+  font-size: 20px; 
+  margin:0rem 0rem 5rem;  
+}
+
+
+@media only screen and (max-width: 500px) {
+     .text-highlight{
+        font-size: 100%; 
+    }
+}
+
+
+.content-center img{
+  margin: auto;
+  border:none;  
+}
+@media only screen and (max-width: 992px) {
+     .content-center img {
+        width: 45%;
+        padding-bottom:3rem;
+    }
+}
+
+.send{
+  width:35%;
+  margin:auto;
+  padding:4rem 0rem 4rem;
+  border-radius:10px;
+}
+
+.btnsend{
+   width: 11rem;
+  background:#6495ED;
+  color:#FCFCFC;
+  font-weight: 200;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 1390px){ 
+     .input-group {
+        width: 45%;
+    }
+}
+
+
+
+.content-right img{
+  padding: 4em;  
+}
+
+.title-gray{
+  color:#848484;
+  font-size: 35px;
+  font-weight:200;
+  margin:40px 0 10px 0px;
+  letter-spacing: 1px; 
+}
+@media only screen and (max-width: 500px) {
+     .title-gray,.title{
+        font-size: 200%; 
+       text-align:center!important; 
+    }
+}
+
+.text{
+  color:#5B5B5B;
+  text-align: justify;
+  font-size:16px;
+  font-weight:200;
+  letter-spacing: 0.5px;
+}
+@media only screen and (max-width: 500px) {
+     .text{
+        font-size: 100%; 
+    }
+}
+
+
+.button{
+ float:right;
+  width:16rem;
+  margin:4rem 9rem;
+  padding:9px 7px 9px 7px;
+  border-radius: 10px;
+  color:#FCFCFC;
+  background:#90A7F4; 
+}
+
+.text-after-title{
+  font-size:18px;
+  opacity:0.5;
+  color:#E6E6FA;
+  font-weight:200;
+}
+@media only screen and (max-width: 500px) {
+     .text-after-title{
+        font-size: 100%;
+       
+  }}
+
+.background-image-diamond{
+  background: url("http://s16.postimg.org/8lc7bny8l/Diamonds_group.jpg")  no-repeat center center;
+}
+
+.text-highlight-small{
+  color:#7171C6;
+  padding: 29rem 0rem 0rem;
+  font-size: 15px;
+}
+
+.text-small{
+  color:#F8F8FF;
+  font-size: 14px;
+  padding:10px 0 40px;
+}
+
+@media only screen and (max-width: 500px) {
+     .text-highlight-small,.text-small{
+        font-size: 90%; 
+       text-align:center!important; }}
+
+.image-diamondsheader{
+ width:100%;
+}
+
+h2{
+  font-size: 40px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 500px) {
+     h2{
+        font-size: 20px; 
+           }}
+
+  
+.button-left{
+  float:left;
+  margin:4rem 0rem;
+  padding:1rem 3rem 1rem 3rem;
+  border-radius: 10px;
+  color:#FCFCFC;
+  background:#90A7F4; 
+}
+
+
+.btn:hover, .btn{
+  font-weight:200;
+  letter-spacing: 1px; 
+  background:#90A7F4;
+  color:#ffffff;
+}
+
+.section-gray{
+ background:#D8D8D8; 
+}
+
+.section-gray img, .section-colour-image{
+  margin: auto;
+  border:none;
+  padding: 4rem 0rem 5rem;
+}
+
+/* FOOTER */
+footer{
+  background:#D8D8D8;
+  padding: 2rem 0rem 2rem;
+}
+
+footer a{
+  font-weight: 
+}
+.content-footer{
+  padding:1em;
+}
+
+
+/* CONTACT US FORM */
+ 
+
+.form-contact-us{
+  background-color:#000000;
+
+  padding-top: 3rem;
+}
+  
+.form-contact-us button{
+  margin: 2em 0 6em 0;
+}
+
+.im-centered { 
+  margin: auto; 
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 500px) {
+    .form-group{
+    	max-width: 100%;
+
+    	}}
+
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+

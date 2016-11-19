@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bella Vita Diamonds</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="bella-vita.css" media="screen">
+</head>
+<body>
+  <!-- ##### HEADER ##### -->
+   <div class="nav-bar-general">
+     <div class="row">
+        <div class="logo text-center col-lg-3">
+           <a href="index.html#">
+              <img class="hidden-xs nav nav-pills nav-stoked logo" src="http://s16.postimg.org/ypox71nh1/Diamond_Logo.png" class="img-responsive" alt="minilogo"> 
+              <h6 class="text-center">BELLA VITA DIAMONDS</h6>
+           </a>
+        </div>
+        <div class="menu text-center col-lg-9">
+        <ul class="nav nav-justified" role="navigation">
+           <li  role="presentation"><a href="diamond-education.html">DIAMOND EDUCATION</a></li>
+           <li role="presentation"><a href="contact-us.html">CONTACT US</a></li>
+           <li role="presentation"><a href="https://www.facebook.com/bellavitadiamonds/?fref=ts">NEWS</a></li>
+           <li class=" text-center dropdown">
+              <div class="text-center ">
+                 <span class="caret"></span>
+                 <a class="text-center dropdown-toggle" data-toggle="dropdown" href="#">
+                    Language
+                    <ul class="dropdown-menu">
+                       <li>
+                 <a href="#">English</a></li>
+                 <li><a href="#">Dutch</a></li> 
+                 </ul>
+           </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        <!---FORM CONTACT US-->
+  <div class= "container-fluid form-contact-us">
+    <div class= "container-fluid title text-center">We would be glad to ear about you!</div>
+    <div class="text-center text-highlight"> Fill out the following information and we will get back to you as soon as possible.</div>
+    <div class="im-centered container">
+      <div class="row">
+        <form class="form-horizontal col-lg-12" method="post" role="form" id="form">
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail Address" required autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <div class="text-center form-group">
+            <button id="contact-button" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--FOOTER-->
+   <footer>
+    <div class = "container-fluid">
+      <div class="row">
+        <div class="logo text-center col-lg-3">
+           <a href="index.html">
+              <img class="hidden-xs nav nav-pills nav-stoked logo" src="http://s16.postimg.org/ypox71nh1/Diamond_Logo.png" class="img-responsive" alt="minilogo"> 
+              <h6 class="text-center">BELLA VITA DIAMONDS</h6>
+           </a>
+        </div>
+
+        <div class="text-center content-footer col-lg-6">
+          <a  href="https://www.facebook.com/bellavitadiamonds/" target="_blank">
+            <img src="http://s16.postimg.org/kohiz89at/facebook.png" />
+          </a>
+
+          <a  href="" target="_blank">
+            <img src="http://s16.postimg.org/pkpr4nytx/twitter.png" />
+          </a>
+          <a  href="https://www.facebook.com/bellavitadiamonds/" target="_blank">
+            <img src="http://s16.postimg.org/4dm0gnm6t/youtube.png" />
+          </a>
+        </div>
+        <div class="col-lg-3 text-center content-footer">
+          Copyright © La Bella Vita Diamonds 2016
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    $( document ).ready(function() {
+      $("#form").submit(function(e){
+        e.preventDefault();
+      });
+      $('#contact-button').click(function(){
+        var email = $('#email').val(),
+            name = $('#name').val(),
+            message = $('#message').val();
+        if(!email || !name || !message || email.indexOf('@') === -1 || email.indexOf('.') === -1) return;
+
+        $('#contact-button').prop('disabled', true);
+        $('#contact-button').html('<span class="glyphicon glyphicon-refresh spinning"></span> Sending...');
+
+        $.ajax({
+          type: "POST",
+          url: '/contact-request',
+          data: {
+            email: email,
+            name: name,
+            message: message
+          },
+          success: function(data){
+            if(data === 'Email Sent') {
+              $('#contact-button').html('Data sent, Thanks!');
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
