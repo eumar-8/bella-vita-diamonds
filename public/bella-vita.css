@@ -210,9 +210,6 @@ footer{
   padding: 2rem 0rem 2rem;
 }
 
-footer a{
-  font-weight: 
-}
 .content-footer{
   padding:1em;
 }
@@ -253,10 +250,5 @@ footer a{
 @keyframes spin {
     from { transform: scale(1) rotate(0deg); }
     to { transform: scale(1) rotate(360deg); }
-}
-
-@-webkit-keyframes spin2 {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
 }
 
