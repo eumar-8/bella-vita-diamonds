@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
   <!-- Latest compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="bella-vita.css" media="screen">
 </head>
@@ -19,25 +21,17 @@
      <div class="row">
         <div class="logo text-center col-lg-3">
            <a href="index.html#">
-              <img class="hidden-xs nav nav-pills nav-stoked logo" src="http://s16.postimg.org/ypox71nh1/Diamond_Logo.png" class="img-responsive" alt="minilogo"> 
+              <img class="hidden-xs nav nav-pills nav-stoked logo" src="http://s16.postimg.org/ypox71nh1/Diamond_Logo.png" alt="minilogo"> 
               <h6 class="text-center">BELLA VITA DIAMONDS</h6>
            </a>
         </div>
         <div class="menu text-center col-lg-9">
-        <ul class="nav nav-justified" role="navigation">
+        <ul class="nav nav-justified">
            <li  role="presentation"><a href="diamond-education.html">DIAMOND EDUCATION</a></li>
            <li role="presentation"><a href="contact-us.html">CONTACT US</a></li>
            <li role="presentation"><a href="https://www.facebook.com/bellavitadiamonds/?fref=ts">NEWS</a></li>
            <li class=" text-center dropdown">
-              <div class="text-center ">
-                 <span class="caret"></span>
-                 <a class="text-center dropdown-toggle" data-toggle="dropdown" href="#">
-                    Language
-                    <ul class="dropdown-menu">
-                       <li>
-                 <a href="#">English</a></li>
-                 <li><a href="#">Dutch</a></li> 
-                 </ul>
+              <div class="text-center "></div>
            </li>
         </ul>
         </div>
@@ -45,7 +39,7 @@
         </div>
         <!--IMAGE SEPARATOR-->
   <div> 
-    <img class="image-diamondsheader" src="http://s16.postimg.org/c7i0ob4lx/Header_Image.jpg" class="img-responsive" alt="diamonds header">
+    <img class="image-diamondsheader" src="http://s16.postimg.org/c7i0ob4lx/Header_Image.jpg" alt="diamonds header">
   </div>
 
   <!--SECTION 1 CONTENT RIGHT -->
@@ -61,9 +55,9 @@
 
           These characteristics give an idea of the quality of a diamond and are used to identify them.
         </div>
-         <a href="contact-us.html">
-        <input class="button-left btn btn-default" type="submit" value="Contact us to know more info">
-        </a>
+        
+        <input class="button-left btn btn-default" type="submit" value="Contact us to know more info" id="contact-us-button">
+        
       </div>
     </div>
   </div>
@@ -123,27 +117,27 @@
   </div>
 
 
-          <!-- ##### FOOTER ##### -->
-  <footer>
+  <!--FOOTER-->
+   <footer>
     <div class = "container-fluid">
       <div class="row">
         <div class="logo text-center col-lg-3">
            <a href="index.html">
-              <img class="hidden-xs nav nav-pills nav-stoked logo" src="http://s16.postimg.org/ypox71nh1/Diamond_Logo.png" class="img-responsive" alt="minilogo"> 
+              <img class="hidden-xs nav nav-pills nav-stoked logo" src="http://s16.postimg.org/ypox71nh1/Diamond_Logo.png" alt="minilogo"> 
               <h6 class="text-center">BELLA VITA DIAMONDS</h6>
            </a>
         </div>
 
         <div class="text-center content-footer col-lg-6">
           <a  href="https://www.facebook.com/bellavitadiamonds/" target="_blank">
-            <img src="http://s16.postimg.org/kohiz89at/facebook.png" />
+            <img src="http://s16.postimg.org/kohiz89at/facebook.png" alt="facebook"/>
           </a>
 
           <a  href="" target="_blank">
-            <img src="http://s16.postimg.org/pkpr4nytx/twitter.png" />
+            <img src="http://s16.postimg.org/pkpr4nytx/twitter.png" alt="twitter" />
           </a>
           <a  href="https://www.facebook.com/bellavitadiamonds/" target="_blank">
-            <img src="http://s16.postimg.org/4dm0gnm6t/youtube.png" />
+            <img src="http://s16.postimg.org/4dm0gnm6t/youtube.png"  alt="youtube" />
           </a>
         </div>
         <div class="col-lg-3 text-center content-footer">
@@ -152,5 +146,12 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#contact-us-button').click(function(){
+        window.location.href = "contact-us.html";
+      })
+    });
+  </script>>
 </body>
 </html>
